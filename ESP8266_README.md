@@ -52,7 +52,7 @@ The `prepareVoltasSignal(String power, String mode, int temp, String fanSpeed)` 
         *   **DRY (Water) & FAN (Fan-Only) Modes:** These modes typically have fixed byte structures for `Signal[1]`, `Signal[2]`, `Signal[3]`, and `Signal[9]`, as the temperature and fan are often not user-adjustable in the same granular way.
     *   This layered logic ensures the most appropriate IR code is generated based on the combination of user inputs.
     *   for some of the raw signals can be checked here-> [signal data.txt](https://github.com/user-attachments/files/20643131/signal.data.txt)
-    *   for detail and versatile signal understanding one can run this c program -> 
+    *   for detail and versatile signal understanding one can run this c program -> [Signal.cpp](https://github.com/Gowrisankar10354/Smart-AC_Control/blob/main/Signal.cpp)
 
 Once the `Signal` array is prepared, `irsend.sendVoltas(Signal, VOLTAS_CMD_LENGTH);` transmits it.
 
